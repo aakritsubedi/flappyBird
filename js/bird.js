@@ -53,7 +53,7 @@ class Bird{
         this.bird.style.transform='rotate(90deg)';
         this.bird.style.top='500px';
         this.bird.style.transition='all 3s';
-        this.bird.style.backgroundImage = 'url(\' ../images/redbird-upflap.png \')';
+        this.bird.style.backgroundImage = 'url(\' images/redbird-upflap.png \')';
     }
 
 

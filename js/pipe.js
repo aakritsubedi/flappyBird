@@ -12,6 +12,7 @@ class Pipe{
         this.pipeBottom=null;
         this.pipeLeft=600;
 
+
         this.createPipe();
     }
     createPipe(){
@@ -19,14 +20,14 @@ class Pipe{
         let pipeWidth =52;
         //styling TopPipe
         topPipe.style.position='absolute';
-        topPipe.style.backgroundImage = 'url(\' ../images/pipe-green.png \')';
+        topPipe.style.backgroundImage = 'url(\' images/pipe-green.png \')';
         topPipe.style.transform='rotate(180deg)';
         topPipe.style.left='600px';
         topPipe.style.width=pipeWidth+'px';
         let bottomPipe = document.createElement('div');
         //styling bottomPipe
         bottomPipe.style.position='absolute';
-        bottomPipe.style.backgroundImage = 'url(\' ../images/pipe-green.png \')';
+        bottomPipe.style.backgroundImage = 'url(\' images/pipe-green.png \')';
         bottomPipe.style.left='600px';
         
         bottomPipe.style.width=pipeWidth+'px';

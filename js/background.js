@@ -41,11 +41,11 @@ class Background{
         //styling backGroundContainer
         backgroundContainer.style.height= '512px';
         backgroundContainer.style.backgroundRepeat='repeat-x';
-        backgroundContainer.style.backgroundImage = 'url(\' ../images/background-day.png\')';
+        backgroundContainer.style.backgroundImage = 'url(\' images/background-day.png\')';
 
         let base = document.createElement('div');
         //Styling Base
-        base.style.backgroundImage='url(\' ../images/base.png\')';
+        base.style.backgroundImage='url(\' images/base.png\')';
         base.style.height= '112px';
         base.style.overflow='hidden';
         base.style.backgroundRepeat='repeat-x';

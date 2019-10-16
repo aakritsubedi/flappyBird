@@ -20,6 +20,7 @@ class Bird{
         birdDiv.style.position='absolute';
         birdDiv.style.left=this.birdX+'px';
         birdDiv.style.top=this.birdY+'px';
+        birdDiv.style.zIndex='3';
         birdDiv.style.backgroundImage='url(\' images/bluebird-upflap.png \')';
 
         this.bird= this.wrapper.appendChild(birdDiv);

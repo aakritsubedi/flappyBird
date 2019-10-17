@@ -17,7 +17,6 @@ class Game{
             
     }
     moveBirdUp(){
-        //var that = this;
         document.addEventListener ('keydown', (event)=>{
             if(event.keyCode == 32 ){
                 this.bird.goUp();
@@ -140,10 +139,10 @@ class Game{
         this.gameStatus.style.transition='all 2s';
         this.gameStatus.style.backgroundColor='#B83227';
         this.gameStatus.style.border='none';
-        this.gameStatus.style.marginLeft='75%';
+        this.gameStatus.style.marginLeft='7%';
         this.gameStatus.style.display='block';
         this.gameStatus.style.opacity='1';
-        this.gameStatus.style.marginTop='20%';
+        this.gameStatus.style.marginTop='5%';
         this.gameStatus.style.lineHeight='75px';
         this.gameStatus.style.borderRadius='0px';
         this.gameStatus.innerHTML = 'GAME OVER';

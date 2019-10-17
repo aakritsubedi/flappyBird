@@ -11,6 +11,7 @@ class Game{
         this.bird = null; 
         this.pipe =[];
         this.gameInterval = null;
+        this.gameStatus=null;
         this.createPlayBtn();
         this.initilizeGame();
             
@@ -104,21 +105,28 @@ class Game{
             this.background.playGame=false;
             clearTimeout(this.gameInterval);
             this.background.updateScoreCardStyle();
+
+            //Game Status Bar
+            this.styleGameOverBtn();
+    
         } 
     }
     createPlayBtn(){
         let startGame = document.createElement('button');
 
-        startGame.style.border='none';
+        startGame.style.border='3px solid #DFAF2B';
         startGame.style.fontSize ='22px';
         startGame.style.fontWeight='bolder';
         startGame.style.opacity='0.7';
         startGame.style.lineHeight='50px';
-        startGame.style.width='50%';
+        startGame.style.width='30%';
         startGame.style.zIndex='2';
-        startGame.style.backgroundColor = '#75DA8B';
+        startGame.style.backgroundColor = '#019031';
         startGame.style.position='absolute';
-        startGame.style.margin='5%';
+        startGame.style.marginLeft='25%';
+        startGame.style.marginTop='5%';
+        startGame.style.color='#ffffff';
+        startGame.style.borderRadius='5%';
         startGame.innerHTML = 'Start Game';
         
         startGame.addEventListener('click',()=>{
@@ -126,7 +134,19 @@ class Game{
             this.playGame();
             this.moveBirdUp();
         });
-        this.wrapper.appendChild(startGame);
+        this.gameStatus = this.wrapper.appendChild(startGame);
+    }
+    styleGameOverBtn(){
+        this.gameStatus.style.transition='all 2s';
+        this.gameStatus.style.backgroundColor='#B83227';
+        this.gameStatus.style.border='none';
+        this.gameStatus.style.marginLeft='75%';
+        this.gameStatus.style.display='block';
+        this.gameStatus.style.opacity='1';
+        this.gameStatus.style.marginTop='20%';
+        this.gameStatus.style.lineHeight='75px';
+        this.gameStatus.style.borderRadius='0px';
+        this.gameStatus.innerHTML = 'GAME OVER';
     }
     //Game Play
     playGame(){
